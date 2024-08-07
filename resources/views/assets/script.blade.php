@@ -38,7 +38,7 @@
     $(document).on('click', '#reload', function() {
 
         $.ajax({
-            method: 'POST',
+            method: 'GET',
             url: route_list,
             success: function (response){
                 employee_id = null;
@@ -58,7 +58,7 @@
             alert('Vui lòng chọn nhân viên');
         }else{
             $.ajax({
-                method: 'POST',
+                method: 'GET',
                 url: route_detail,
                 data: {
                     id: employee_id,
